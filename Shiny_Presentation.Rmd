@@ -1,0 +1,48 @@
+---
+title: "Shiny_presentation"
+author: "Bryent Lee"
+date: "7/2/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Data Summary Table
+
+- Uses data from Rstudio buildin datasets 
+- Cars, Rock, Pressure, US Arrests
+- Immediately get the summary table and head of each data sets depending on the input
+- Total Observations are also printed
+
+## Link to app
+- To use app, click [here](https://blee408.shinyapps.io/first_app/)
+- To gain access for [github files for ui.R, server.R, Presentation R markdown](https://github.com/bryentlee/first-)
+- Summary table contained mean, median, 1 & 3 quantile, minimum and maximum observations of each columns 
+- Example of rock data shown below
+```{r}
+summary(rock)
+```
+
+## Criteria
+**Satisfied the following Criteria**
+
+1) It must be done in Slidify or Rstudio Presenter
+2) It must be 5 pages
+3) It must be hosted on github or Rpubs
+4) It must contained some embedded R code that gets run when slidifying the document
+
+
+## Thank You
+- Thank you **my parents** for giving birth to me 
+- Also, thanks my siblings, **Seaweed & Jaybird**
+- Interactive plot of dataset, Rock is below 
+
+```{r, warning=FALSE, message=FALSE}
+library(plotly)
+library(ggplot2)
+library(RColorBrewer)
+plot_ly(rock, x= rock$area, y= rock$peri, color = as.factor(rock$perm))
+```
+
